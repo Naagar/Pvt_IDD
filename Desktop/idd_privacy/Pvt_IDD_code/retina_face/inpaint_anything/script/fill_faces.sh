@@ -1,0 +1,13 @@
+python3 fill_faces.py \
+    --input_imgs_path ./idd_with_faces_all_images/images/ \
+    --input_masks_path ./idd_with_faces_all_images/masks/ \
+    --steps 200 \
+    --point_labels 1 \
+    --text_prompt " faces" \
+    --output_dir ./idd_with_fake_face \
+    --sam_model_type "vit_t" \
+    --sam_ckpt ./weights/mobile_sam.pt \
+    --erode_kernel_size 0 \
+    --dilate_kernel_size 2 \
+    --lama_config ./lama/configs/prediction/default.yaml \
+    --lama_ckpt ./pretrained_models/LaMa_models/lama-celeba-hq/lama-deep \
